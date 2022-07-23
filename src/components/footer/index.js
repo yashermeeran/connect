@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="flex h-24 w-full items-center justify-center border-t">
-      Copyrigts @ 2022 - Yasher Meeran
+      Copyrights @ 2022 - Yaser Meeran
     </footer>
   )
 }
