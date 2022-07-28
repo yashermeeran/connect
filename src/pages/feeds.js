@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import Layout from '@components/layout'
 import { USER_LOGIN_STATUS } from '@constants/app'
 
+import Feed from '@components/feed'
+
 const FeedsPage = () => {
   const router = useRouter()
   const [shouldShowFeedsPage, setShouldShowFeedsPage] = useState(false)
@@ -22,9 +24,7 @@ const FeedsPage = () => {
 
   return (
     <Layout>
-      <div>
-        <span> Feeds Page</span>
-      </div>
+      <Feed />
     </Layout>
   )
 }

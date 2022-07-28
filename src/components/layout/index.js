@@ -174,7 +174,7 @@ const Layout = ({ children }) => {
           </>
         )}
       </Disclosure>
-      <main>{children}</main>
+      <main className="max-w-screen-xl md:w-full min-h-screen mx-auto py-5">{children}</main>
     </div>
   )
 }

@@ -11,7 +11,8 @@
       "@api/*": ["src/api/*"],
       "@sagas/*": ["src/sagas/*"],
       "@reducers/*": ["src/reducers/*"],
-      "@state/*": ["src/state/*"]
+      "@state/*": ["src/state/*"],
+      "@mocks/*": ["src/mocks/*"]
     }
   },
   "exclude": ["node_modules", ".next"]
