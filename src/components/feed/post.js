@@ -3,7 +3,7 @@ import moment from 'moment'
 const Post = ({ post }) => {
   const { user } = post
   return (
-    <div className="w-full shadow h-auto bg-white rounded-md">
+    <div className="w-full shadow h-auto bg-white md:rounded-md">
       <div className="flex items-center space-x-2 p-2.5 px-4">
         <div className="w-10 h-10">
           <img src={user.dp} className="w-full h-full rounded-full" alt="dp" />

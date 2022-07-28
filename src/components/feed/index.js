@@ -1,5 +1,6 @@
 import DesktopLeftSidebar from './desktopLeftSidebar'
 import PostContainer from './postContainer'
+import CreatePost from './createPost'
 
 const Feed = () => {
   return (
@@ -8,6 +9,7 @@ const Feed = () => {
         <DesktopLeftSidebar />
       </div>
       <div className="w-full md:w-2/4 h-full">
+        <CreatePost />
         <PostContainer />
       </div>
       <div className="hidden md:block md:w-1/4 h-full"></div>
