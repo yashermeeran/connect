@@ -152,29 +152,15 @@ const Layout = ({ children }) => {
                       <span className="text-gray-900">Sign out</span>
                     </div>
                   </div>
-                  {/*navigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as="a"
-                    href={item.href}
-                    className={classNames(
-                      item.current
-                        ? 'default-text-color text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'block px-3 py-2 rounded-md text-base font-medium'
-                    )}
-                    aria-current={item.current ? 'page' : undefined}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
-                    ))*/}
                 </div>
               </div>
             </Disclosure.Panel>
           </>
         )}
       </Disclosure>
-      <main className="max-w-screen-xl md:w-full min-h-screen mx-auto py-1 md:py-5">{children}</main>
+      <main className="max-w-screen-xl md:w-full min-h-screen mx-auto py-1 md:py-5">
+        {children}
+      </main>
     </div>
   )
 }

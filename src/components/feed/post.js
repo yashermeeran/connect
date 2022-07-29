@@ -14,11 +14,6 @@ const Post = ({ post }) => {
             {moment(post.createdAt).fromNow()}
           </span>
         </div>
-        <div className="w-8 h-8">
-          <button className="w-full h-full hover:bg-gray-100 rounded-full text-gray-400 focus:outline-none">
-            <i className="fas fa-ellipsis-h"></i>
-          </button>
-        </div>
       </div>
       {post.caption ? (
         <div className="mb-1">
@@ -28,11 +23,11 @@ const Post = ({ post }) => {
         </div>
       ) : null}
       {post.image ? (
-        <div className="w-full h-76 max-h-80">
+        <div className="w-full h-76 max-h-auto">
           <img
             src={post.image}
             alt="postimage"
-            className="w-full h-76 max-h-80"
+            className="w-full h-full max-h-auto"
           />
         </div>
       ) : null}
@@ -86,7 +81,20 @@ const Post = ({ post }) => {
         <div className="flex space-x-3 text-gray-500 text-sm font-thin">
           <button className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
             <div>
-              <i className="fas fa-thumbs-up"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 text-gray-900"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                />
+              </svg>
             </div>
             <div>
               <p className="font-semibold">Like</p>
@@ -94,7 +102,20 @@ const Post = ({ post }) => {
           </button>
           <button className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
             <div>
-              <i className="fas fa-comment"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 text-gray-900"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+                />
+              </svg>
             </div>
             <div>
               <p className="font-semibold">Comment</p>
@@ -102,7 +123,20 @@ const Post = ({ post }) => {
           </button>
           <button className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
             <div>
-              <i className="fas fa-share"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 text-gray-900"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+                />
+              </svg>
             </div>
             <div>
               <p className="font-semibold">Share</p>

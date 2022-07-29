@@ -9,8 +9,8 @@ export const postsData = [
       fullname: 'Yaser Meeran',
       dp: YaserProfilePic.src
     },
-    caption: 'This is post caption',
-    image: 'https://picsum.photos/1920/1080',
+    caption: 'New Profile Pic ☺ !! ',
+    image: YaserProfilePic.src,
     likes: 129,
     comments: 5,
     shares: 0,
