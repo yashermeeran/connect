@@ -1,8 +1,40 @@
+import { useState } from 'react'
+import CreatePostDialog from './createPostDialog'
 import YaserProfilePic from '@assets/profile/yaser.jpg'
 
-const CreatePost = () => {
+import createMockPostData from '@utils/createMockPostData'
+
+const CreatePost = ({ setNewPostList }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const [images, setImages] = useState([])
+
+  const handleCreatePostClick = () => {
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsOpen(false)
+    setImages([])
+  }
+
+  const handlePost = (description) => {
+    const image = images.length ? images[0].src : null
+    const newPost = createMockPostData({ image, caption: description })
+
+    setNewPostList((prevState) => [newPost, ...prevState])
+    closeModal()
+  }
+
   return (
-    <div className="md:rounded-lg bg-white flex flex-col p-3 px-4 shadow my-3">
+    <div className="md:rounded-lg bg-white flex flex-col p-3 px-4 shadow mb-3 md:my-3 border-t">
+      <CreatePostDialog
+        isOpen={isOpen}
+        closeModal={closeModal}
+        setImages={setImages}
+        images={images}
+        handlePost={handlePost}
+      />
       <div className="flex items-center space-x-2 border-b pb-3 mb-2">
         <div className="w-10 h-10">
           <img
@@ -11,12 +43,20 @@ const CreatePost = () => {
             alt="dp"
           />
         </div>
-        <button className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-none flex-grow bg-gray-100 text-gray-500 text-left rounded-full h-10 pl-5">
+        <button
+          onClick={() => handleCreatePostClick()}
+          className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-none flex-grow bg-gray-100 text-gray-500 text-left rounded-full h-10 pl-5"
+        >
           What&apos;s on your mind, Yaser?
         </button>
       </div>
       <div className="flex space-x-3 font-thin text-sm text-gray-600 -mb-1">
-        <button className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
+        <button
+          onClick={() => {
+            handleCreatePostClick()
+          }}
+          className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +74,7 @@ const CreatePost = () => {
             </svg>
           </div>
           <div>
-            <p className="font-semibold">Photos/Video</p>
+            <p className="font-semibold">Photos</p>
           </div>
         </button>
       </div>

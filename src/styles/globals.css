@@ -40,3 +40,20 @@ body {
   max-width: 1300px;
   margin: auto;
 }
+
+.createPostContainer {
+  user-select: text;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 15px;
+  min-height: 25px;
+  direction: ltr;
+}
+
+[contentEditable='true']:empty:not(:focus):before {
+  content: attr(data-text);
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}

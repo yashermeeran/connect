@@ -16,7 +16,7 @@ const Post = ({ post }) => {
         </div>
       </div>
       {post.caption ? (
-        <div className="mb-1">
+        <div className="my-3">
           <p className="text-gray-700 max-h-10 truncate px-3 text-sm">
             {post.caption}
           </p>
