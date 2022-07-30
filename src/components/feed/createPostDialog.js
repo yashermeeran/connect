@@ -39,7 +39,7 @@ export default function CreatePostDialog({
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-xl bg-white text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-11/12 max-w-md transform overflow-hidden rounded-xl bg-white text-left align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="div"
                     className="text-lg font-bold leading-6 text-gray-900 w-full flex justify-center items-center h-14 border-b"
