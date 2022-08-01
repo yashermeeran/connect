@@ -1,3 +1,5 @@
+import { userMock } from '@mocks/index'
+import Link from 'next/link'
 import YaserProfilePic from '@assets/profile/yaser.jpg'
 
 const DesktopLeftSidebar = () => {
@@ -31,7 +33,9 @@ const DesktopLeftSidebar = () => {
           </svg>
         </div>
         <div className="flex flex-col px-3">
-          <span className="text-gray-900">View your profile</span>
+          <Link href={`/profile/${userMock.slug}/`} passHref>
+            <a className="text-gray-900">View your profile</a>
+          </Link>
         </div>
       </div>
     </div>

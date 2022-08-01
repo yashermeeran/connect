@@ -1,14 +1,17 @@
 import YaserProfilePic from '@assets/profile/yaser.jpg'
 
+export const userMock = {
+  _id: '1',
+  username: 'yaser',
+  fullname: 'Yaser Meeran',
+  dp: YaserProfilePic.src,
+  slug: 'yasermeeran'
+}
+
 export const postsData = [
   {
     _id: '1',
-    user: {
-      _id: '1',
-      username: 'yaser',
-      fullname: 'Yaser Meeran',
-      dp: YaserProfilePic.src
-    },
+    user: userMock,
     caption: 'New Profile Pic ☺ !! ',
     image: YaserProfilePic.src,
     likes: 129,
@@ -19,12 +22,7 @@ export const postsData = [
   },
   {
     _id: '2',
-    user: {
-      _id: '1',
-      fullname: 'Yaser Meeran',
-      username: 'yaser',
-      dp: YaserProfilePic.src
-    },
+    user: userMock,
     caption: 'This is post caption',
     image: 'https://picsum.photos/1920/1070',
     likes: 798,
@@ -35,12 +33,7 @@ export const postsData = [
   },
   {
     _id: '3',
-    user: {
-      _id: '1',
-      fullname: 'Yaser Meeran',
-      username: 'yaser',
-      dp: YaserProfilePic.src
-    },
+    user: userMock,
     caption: 'This is post caption',
     image: 'https://picsum.photos/1920/1060',
     likes: 456,
@@ -51,12 +44,7 @@ export const postsData = [
   },
   {
     _id: '4',
-    user: {
-      _id: '1',
-      fullname: 'Yaser Meeran',
-      username: 'yaser',
-      dp: YaserProfilePic.src
-    },
+    user: userMock,
     caption: 'This is post caption',
     image: 'https://picsum.photos/1920/1050',
     likes: 29,

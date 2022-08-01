@@ -4,7 +4,7 @@ import YaserProfilePic from '@assets/profile/yaser.jpg'
 
 import createMockPostData from '@utils/createMockPostData'
 
-const CreatePost = ({ setNewPostList }) => {
+const CreatePost = ({ setNewPostList = () => {} }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const [images, setImages] = useState([])

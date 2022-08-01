@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useRouter } from 'next/router'
+import { userMock } from '@mocks/index'
 
 import { USER_LOGIN_STATUS } from '@constants/app'
 
@@ -86,15 +87,16 @@ const Layout = ({ children }) => {
                       <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active ? 'bg-gray-100' : '',
-                                'block px-4 py-2 text-sm text-gray-700'
-                              )}
-                            >
-                              Your Profile
-                            </a>
+                            <Link href={`/profile/${userMock.slug}/`} passHref>
+                              <a
+                                className={classNames(
+                                  active ? 'bg-gray-100' : '',
+                                  'block px-4 py-2 text-sm text-gray-700'
+                                )}
+                              >
+                                Your Profile
+                              </a>
+                            </Link>
                           )}
                         </Menu.Item>
                         <Menu.Item>
@@ -127,7 +129,9 @@ const Layout = ({ children }) => {
                     />
                     <div className="flex flex-col justify-center px-3">
                       <span className="text-gray-900">Yaser Meeran</span>
-                      <span className="text-gray-500">View your profile</span>
+                      <Link href={`/profile/${userMock.slug}/`} passHref>
+                        <a className="text-gray-500">View your profile</a>
+                      </Link>
                     </div>
                   </div>
                   <div className="px-2 pt-2 pb-3 space-y-1 h-full flex items-center">
