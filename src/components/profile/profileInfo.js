@@ -1,10 +1,11 @@
 import React from 'react'
+import MobileProfileIntro from './mobileProfileIntro'
 import YaserProfilePic from '@assets/profile/yaser.jpg'
 
 const ProfileInfo = () => {
   return (
     <div className="w-full h-auto md:h-40 bg-gray-50 flex justify-center md:justify-start ">
-      <div className="px-4 pt-2 pb-3 space-y-1 h-full w-full relative bottom-10 md:static md:bottom-0 flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
+      <div className="px-4 md:pt-2 md:pb-3 space-y-1 h-full w-full relative bottom-8 md:static md:bottom-0 flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
         <img
           className="h-40 w-40 md:h-40 md:w-40 rounded-full md:relative md:bottom-12 md:left-3"
           src={YaserProfilePic.src}
@@ -26,6 +27,7 @@ const ProfileInfo = () => {
             <span className="tex-black font-medium pl-2">Edit Profile</span>
           </div>
         </div>
+        <MobileProfileIntro />
       </div>
     </div>
   )

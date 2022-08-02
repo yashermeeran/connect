@@ -5,7 +5,11 @@ export const userMock = {
   username: 'yaser',
   fullname: 'Yaser Meeran',
   dp: YaserProfilePic.src,
-  slug: 'yasermeeran'
+  slug: 'yasermeeran',
+  profile: {
+    bio: 'I am not fake, am still perfect !!',
+    location: 'Chennai, India'
+  }
 }
 
 export const postsData = [
