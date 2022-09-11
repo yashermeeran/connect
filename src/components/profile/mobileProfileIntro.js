@@ -22,7 +22,7 @@ const MobileProfileIntro = () => {
           </svg>
           <span>{userMock.profile.bio}</span>
         </div>
-        <div className="flex flex-row gap-3 justify-start items-center w-full">
+        {/* <div className="flex flex-row gap-3 justify-start items-center w-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -44,7 +44,7 @@ const MobileProfileIntro = () => {
             />
           </svg>
           <span>{`From ${userMock.profile.location}`}</span>
-        </div>
+        </div> */}
       </div>
     </div>
   )

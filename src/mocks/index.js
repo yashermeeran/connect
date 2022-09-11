@@ -1,10 +1,12 @@
 import YaserProfilePic from '@assets/profile/yaser.jpg'
+import YaserCoverPic from '@assets/profile/yaser_cover_pic.jpeg'
 
 export const userMock = {
   _id: '1',
   username: 'yaser',
   fullname: 'Yaser Meeran',
   dp: YaserProfilePic.src,
+  coverPic: YaserCoverPic.src,
   slug: 'yasermeeran',
   profile: {
     bio: 'I am not fake, am still perfect !!',

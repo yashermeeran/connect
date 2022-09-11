@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import EditProfileInfoModal from './editProfileModal'
 import MobileProfileIntro from './mobileProfileIntro'
 import YaserProfilePic from '@assets/profile/yaser.jpg'
 
 const ProfileInfo = () => {
+  const [showEditProfileForm, setShowEditProfileForm] = useState(false)
+
+  const handleEditProfileForm = (showModal) => {
+    setShowEditProfileForm(showModal)
+  }
+
   return (
     <div className="w-full h-auto md:h-40 bg-gray-50 flex justify-center md:justify-start ">
       <div className="px-4 md:pt-2 md:pb-3 space-y-1 h-full w-full relative bottom-8 md:static md:bottom-0 flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start">
@@ -15,7 +22,10 @@ const ProfileInfo = () => {
           <span className="text-gray-900 font-bold text-2xl md:text-3xl">
             Yaser Meeran
           </span>
-          <div className="w-auto h-9 md:w-36 rounded-md bg-gray-200 flex justify-center items-center mt-5 md:mt-0 cursor-pointer">
+          <div
+            className="w-auto h-9 md:w-36 rounded-md bg-gray-200 flex justify-center items-center mt-5 md:mt-0 cursor-pointer"
+            onClick={() => handleEditProfileForm(true)}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -27,6 +37,7 @@ const ProfileInfo = () => {
             <span className="tex-black font-medium pl-2">Edit Profile</span>
           </div>
         </div>
+        <EditProfileInfoModal showEditProfileForm={showEditProfileForm} handleEditProfileForm={handleEditProfileForm} />
         <MobileProfileIntro />
       </div>
     </div>
