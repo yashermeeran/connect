@@ -51,9 +51,9 @@ const DesktopProfileInfo = () => {
           <span>{`From ${userMock.profile.location}`}</span>
         </div>
 
-        <div className="w-full h-9 rounded-md bg-gray-200 flex justify-center items-center mt-3 cursor-pointer">
+        {/* <div className="w-full h-9 rounded-md bg-gray-200 flex justify-center items-center mt-3 cursor-pointer">
           <span className="tex-black font-medium pl-2">Edit Details</span>
-        </div>
+        </div> */}
       </div>
     </div>
   )
