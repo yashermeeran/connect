@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn run clean && next dev -p 8001",
+    "dev": "npm run clean && next dev -p 8001",
     "build": "next build",
     "start": "next start -p 8001",
     "lint": "next lint",
     "clean": "rm -rf .next",
-    "build-start": "yarn run clean && yarn run build && yarn run start"
+    "build-start": "npm run clean && npm run build && npm run start"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
